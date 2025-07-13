@@ -52,6 +52,12 @@ vec3 voxelNormal = fsInput.attributes.normalEC;
 
 - Fixed voxel rendering with orthographic cameras. [#12629](https://github.com/CesiumGS/cesium/pull/12629)
 
+#### Additions :tada:
+
+- Adds support for instancing a model at runtime via `ModelInstance` and `ModelInstanceCollection` classes. Supply `Matrix4` transformation matrices in world space from the earth origin to `model.instances.add(transform)`. [#12588](https://github.com/CesiumGS/cesium/pull/12588)
+
+#### Fixes :wrench:
+
 ## 1.129 - 2025-05-01
 
 ### @cesium/engine
