@@ -665,6 +665,8 @@ ModelSceneGraph.prototype.buildRenderResources = function (model, frameState) {
 ModelSceneGraph.prototype.computeBoundingVolumes = function (
   modelRenderResources,
 ) {
+  const model = modelRenderResources.model;
+
   const scenePositionMin = Cartesian3.fromElements(
     Number.MAX_VALUE,
     Number.MAX_VALUE,
@@ -745,7 +747,7 @@ ModelSceneGraph.prototype.computeBoundingVolumes = function (
 
   this._rootBoundingSphere = boundingSphere;
   // TODO: resolve model space bounding sphere
-  this._boundingSphere = BoundingSphere.clone(boundingSphere);
+  model._boundingSphere = BoundingSphere.clone(boundingSphere);
 };
 
 /**
