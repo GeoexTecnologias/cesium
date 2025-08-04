@@ -492,7 +492,6 @@ function Model(options) {
     modelInstances: options.instances,
     model: this,
   });
-  this._nodesByName = {}; // Stores the nodes by their names in the glTF.
 
   /**
    * Used for picking primitives that wrap a model.
@@ -1802,7 +1801,7 @@ Model.prototype.getNode = function (name) {
   Check.typeOf.string("name", name);
   //>>includeEnd('debug');
 
-  return this._nodesByName[name];
+  return this.sceneGraph._nodesByName[name];
 };
 
 /**
